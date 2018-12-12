@@ -13,10 +13,10 @@ function getUsers() {
    const list = client.guilds.get("436232448121241622").members;
 
    // Iterate through the collection of GuildMembers from the Guild getting the username property of each member 
-   for (i = 0; i < list.length; i++) {
-      //userList.push(list[i].id);
-      //count++;
-   }
+   //for (i = 0; i < list.length; i++) {
+   //userList.push(list[i].id);
+   //count++;
+   //}
    count = 5;
 }
 
