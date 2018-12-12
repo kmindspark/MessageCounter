@@ -14,6 +14,7 @@ function getUsers(message) {
    var curGuildMembers = client.guilds.get("436232448121241622"); //.members;
    message.reply("Finished getting...")
 
+   curGuildMembers.members.forEach(member => console.log(member.user.username));
    /*for (let [snowflake, guildMember] of curGuildMembers.members) {
       /*console.log('snowflake: ' + snowflake);
       console.log('id: ' + guildMember.id);
