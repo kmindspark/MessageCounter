@@ -17,7 +17,7 @@ function getUsers() {
    //userList.push(list[i].id);
    //count++;
    //}
-   count = list.length;
+   count = 5;
 }
 
 client.on('ready', () => {
