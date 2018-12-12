@@ -9,8 +9,10 @@ var userDaily = [];
 var userTotal = [];
 var count = 0;
 
-function getUsers() {
-   var curGuildMembers = client.guilds.get("436232448121241622").members;
+function getUsers(message) {
+   message.reply("Getting guild members...")
+   var curGuildMembers = client.guilds.get("436232448121241622"); //.members;
+   message.reply("Finished getting...")
 
    // Iterate through the collection of GuildMembers from the Guild getting the username property of each member 
    /*for (i = 0; i < curGuildMembers.length; i++) {
@@ -27,7 +29,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
    if (message.content === "m ping") {
-      getUsers();
+      getUsers(message);
       message.reply("Pong");
       message.reply(count);
       /*
