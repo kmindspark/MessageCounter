@@ -10,10 +10,10 @@ var userTotal = [];
 var count = 0;
 
 function getUsers() {
-   const list = client.guilds.get("436232448121241622");
+   var curGuildMembers = client.guilds.get("436232448121241622").members;
 
    // Iterate through the collection of GuildMembers from the Guild getting the username property of each member 
-   for (i = 0; i < list.members.length; i++) {
+   for (i = 0; i < curGuildMembers.length; i++) {
       //userList.push(list[i].id);
       //count++;
    }
@@ -22,11 +22,12 @@ function getUsers() {
 }
 
 client.on('ready', () => {
-   getUsers();
+   //getUsers();
 });
 
 client.on('message', message => {
    if (message.content === "m ping") {
+      getUsers();
       message.reply("Pong");
       message.reply(count);
       /*
