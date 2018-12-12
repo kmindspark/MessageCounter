@@ -18,8 +18,7 @@ function getUsers() {
    //count++;
    //}
 
-   //list.members.forEach(member => console.log(member.user.id));
-   count = 5;
+   list.members.forEach(member => count++);
 }
 
 client.on('ready', () => {
