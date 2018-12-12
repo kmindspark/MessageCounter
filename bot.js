@@ -10,11 +10,12 @@ var userTotal = [];
 var count = 0;
 
 function getUsers(message) {
-   message.reply("Getting guild members...")
+   message.reply("Getting guild members...");
    var curGuildMembers = client.guilds.get("436232448121241622"); //.members;
-   message.reply("Finished getting...")
+   message.reply("Finished getting...");
+   message.reply(typeof curGuildMembers);
 
-   curGuildMembers.members.forEach(member => console.log(member.user.username));
+   //curGuildMembers.members.forEach(member => console.log(member.user.username));
    /*for (let [snowflake, guildMember] of curGuildMembers.members) {
       /*console.log('snowflake: ' + snowflake);
       console.log('id: ' + guildMember.id);
