@@ -18,7 +18,7 @@ function getUsers() {
    //count++;
    //}
 
-   list.members.forEach(member => console.log(member.user.id));
+   //list.members.forEach(member => console.log(member.user.id));
    count = 5;
 }
 
