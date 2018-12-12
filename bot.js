@@ -11,7 +11,7 @@ var count = 0;
 
 function getUsers(message) {
    message.reply("Getting guild members...")
-   var curGuildMembers = client.guilds.get("436232448121241622"); //.members;
+   var curGuildMembers = client.guilds.get("436232448121241622").members; //.members;
    message.reply("Finished getting...")
 
    for (let [snowflake, guildMember] of curGuildMembers) {
