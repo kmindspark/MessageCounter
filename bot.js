@@ -70,7 +70,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
 
-   let curID = newMessage.member.id;
+   let curID = message.member.id;
    userIndex = userList.indexOf(curID);
    if (userIndex >= 0) {
       userDaily[userIndex]++;
