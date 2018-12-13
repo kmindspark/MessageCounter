@@ -82,7 +82,7 @@ client.on('message', message => {
    }
 
    if (message.content === "m rank") {
-      //let curRankings = getRankings();
+      let curRankings = getRankings();
       message.channel.send({
          embed: {
             color: 16711782,
