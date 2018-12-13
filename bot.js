@@ -27,6 +27,7 @@ function getUsers() {
 function getRankings(cumulative) {
    var curList = userList.slice();
    var curDaily = userDaily.slice();
+
    if (cumulative) {
       curDaily = userTotal.slice();
    }
@@ -76,7 +77,7 @@ client.on('message', message => {
    }
 
    if (message.content === "m rank") {
-      let curRankings = getRankings();
+      let curRankings = getRankings(false);
       message.channel.send({
          embed: {
             color: 16711782,
