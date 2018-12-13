@@ -78,8 +78,9 @@ client.on('message', message => {
    }
 
    if (message.content === "m ping") {
-      message.reply("Pong: " + count + " members in this server.");
-      message.reply(count);
+      message.reply("Pong");
+      //message.reply("Pong: " + count + " members in this server.");
+      //message.reply(count);
       /*
       for (i = 0; i < userList.length; i++) {
          message.reply(userList[i]);
