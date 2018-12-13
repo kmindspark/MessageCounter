@@ -48,9 +48,11 @@ function getRankings(cumulative) {
 client.on('ready', () => {
    getUsers();
 
-   new CronJob('00 00 04 * * *', function () {
+   new CronJob('00 30 07 * * *', function () {
       var curRankings = getRankings(false);
-      message.channel.send({
+      var curChannel = client.channels.get("436232448121241620");
+
+      curChannel.send({
          embed: {
             color: 16711782,
             title: "Messages Sent Today",
