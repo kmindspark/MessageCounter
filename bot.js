@@ -91,9 +91,21 @@ client.on('message', message => {
       let curRankings = getRankings(true);
       message.channel.send({
          embed: {
-            color: 16711782,
-            title: "Messages Sent Today",
+            color: 1302784,
+            title: "Messages Sent (Cumulative)",
             description: curRankings
+         }
+      });
+   }
+
+   if (message.content === "m help") {
+      let curRankings = getRankings(true);
+      message.channel.send({
+         embed: {
+            color: 3447003,
+            title: "Help",
+            description: "**m ping:** You get a pong. \n **m rank:** You get message count rankings for the day! \n \
+            ** m trank:** You get message count rankings from the last restart of the bot!"
          }
       });
    }
