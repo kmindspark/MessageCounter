@@ -21,15 +21,9 @@ function getUsers() {
       userTotal.push(0);
       count++;
    }
-
-   // Iterate through the collection of GuildMembers from the Guild getting the username property of each member 
-   /*for (i = 0; i < curGuildMembers.length; i++) {
-      //userList.push(list[i].id);
-      //count++;
-   }*/
 }
 
-/*
+
 function getRankings(cumulative) {
    var curList = userList.slice();
    var curDaily = userDaily.slice();
@@ -48,7 +42,7 @@ function getRankings(cumulative) {
    }
 
    return finalString;
-}*/
+}
 
 client.on('ready', () => {
    getUsers();
