@@ -19,7 +19,7 @@ function getUsers(message) {
       console.log('snowflake: ' + snowflake);
       console.log('id: ' + guildMember.id);
       console.log('user id: ' + guildMember.user.id);
-      userList.push(list[i].id);
+      userList.push(guildMember.user.id);
       count++;
    }
 
