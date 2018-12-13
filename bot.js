@@ -36,7 +36,7 @@ function getRankings(cumulative) {
 
    while (curList.length > 0) {
       let i = curDaily.indexOf(Math.max(...curDaily));
-      let messages = vals.splice(i, 1);
+      let messages = curDaily.splice(i, 1);
       let curPerson = curList.splice(i, 1);
       finalString = finalString + count + ". <@" + curPerson + ">: " + messages + "\%\n"
       count++;
