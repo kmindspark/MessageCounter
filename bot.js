@@ -29,6 +29,7 @@ function getUsers() {
    }*/
 }
 
+/*
 function getRankings(cumulative) {
    var curList = userList.slice();
    var curDaily = userDaily.slice();
@@ -49,7 +50,6 @@ function getRankings(cumulative) {
    return finalString;
 }
 
-
 client.on('ready', () => {
    getUsers();
    /*
@@ -66,7 +66,7 @@ client.on('ready', () => {
    for (i = 0; i < count; i++) {
       userDaily[i] = 0;
    }*/
-});
+//});
 
 client.on('message', message => {
 
