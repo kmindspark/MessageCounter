@@ -38,7 +38,7 @@ function getRankings(cumulative) {
       let i = curDaily.indexOf(Math.max(...curDaily));
       let messages = curDaily.splice(i, 1);
       let curPerson = curList.splice(i, 1);
-      finalString = finalString + count + ". <@" + curPerson + ">: " + messages + "\%\n"
+      finalString = finalString + count + ". <@" + curPerson + ">: " + messages + "\n"
       count++;
    }
 
@@ -49,7 +49,7 @@ client.on('ready', () => {
    getUsers();
 
    new CronJob('00 00 04 * * *', function () {
-      var curRankings = getRankings();
+      var curRankings = getRankings(false);
       message.channel.send({
          embed: {
             color: 16711782,
@@ -87,6 +87,16 @@ client.on('message', message => {
       });
    }
 
+   if (message.content === "m trank") {
+      let curRankings = getRankings(true);
+      message.channel.send({
+         embed: {
+            color: 16711782,
+            title: "Messages Sent Today",
+            description: curRankings
+         }
+      });
+   }
 });
 
 // THIS  MUST  BE  THIS  WAY
