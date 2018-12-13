@@ -52,6 +52,7 @@ function getRankings(cumulative) {
 
 client.on('ready', () => {
    getUsers();
+   /*
    new CronJob('00 00 04 * * *', function () {
       var curRankings = getRankings();
       message.channel.send({
@@ -64,7 +65,7 @@ client.on('ready', () => {
    }, null, true, 'America/Los_Angeles');
    for (i = 0; i < count; i++) {
       userDaily[i] = 0;
-   }
+   }*/
 });
 
 client.on('message', message => {
@@ -84,6 +85,7 @@ client.on('message', message => {
          message.reply(userList[i]);
       }*/
    }
+   /*
    if (message.content === "m rank") {
       let curRankings = getRankings();
       message.channel.send({
@@ -94,7 +96,7 @@ client.on('message', message => {
          }
       });
    }
-
+   */
 });
 
 // THIS  MUST  BE  THIS  WAY
