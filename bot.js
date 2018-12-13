@@ -82,7 +82,7 @@ client.on('message', message => {
          embed: {
             color: 16711782,
             title: "Messages Sent Today",
-            description: "Hello"
+            description: curRankings
          }
       });
    }
