@@ -19,6 +19,8 @@ function getUsers(message) {
       console.log('snowflake: ' + snowflake);
       console.log('id: ' + guildMember.id);
       console.log('user id: ' + guildMember.user.id);
+      userList.push(list[i].id);
+      count++;
    }
 
    // Iterate through the collection of GuildMembers from the Guild getting the username property of each member 
@@ -27,7 +29,6 @@ function getUsers(message) {
       //count++;
    }*/
 
-   count = 1;
 }
 
 client.on('ready', () => {
