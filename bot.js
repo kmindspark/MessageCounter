@@ -15,12 +15,11 @@ function getUsers(message) {
    message.reply("Finished getting...");
    message.reply(typeof curGuildMembers);
 
-   //curGuildMembers.members.forEach(member => console.log(member.user.username));
-   /*for (let [snowflake, guildMember] of curGuildMembers.members) {
-      /*console.log('snowflake: ' + snowflake);
+   for (let [snowflake, guildMember] of curGuildMembers.members) {
+      console.log('snowflake: ' + snowflake);
       console.log('id: ' + guildMember.id);
       console.log('user id: ' + guildMember.user.id);
-   }*/
+   }
 
    // Iterate through the collection of GuildMembers from the Guild getting the username property of each member 
    /*for (i = 0; i < curGuildMembers.length; i++) {
