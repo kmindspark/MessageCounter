@@ -79,16 +79,15 @@ client.on('message', message => {
 
    if (message.content === "m ping") {
       message.reply("Pong: " + count + " members in this server.");
-      message.reply(count);
    }
 
    if (message.content === "m rank") {
-      let curRankings = getRankings();
+      //let curRankings = getRankings();
       message.channel.send({
          embed: {
             color: 16711782,
             title: "Messages Sent Today",
-            description: curRankings
+            description: Hello
          }
       });
    }
