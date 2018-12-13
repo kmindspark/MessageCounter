@@ -48,9 +48,9 @@ function getRankings(cumulative) {
 client.on('ready', () => {
    getUsers();
 
-   new CronJob('00 30 07 * * *', function () {
+   new CronJob('00 00 04 * * *', function () {
       var curRankings = getRankings(false);
-      var curChannel = client.channels.get("436232448121241620");
+      var curChannel = client.channels.get("436232448121241622");
 
       curChannel.send({
          embed: {
