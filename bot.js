@@ -74,10 +74,6 @@ client.on('ready', () => {
             description: curRankings
          }
       });
-
-      for (i = 0; i < count; i++) {
-         userDaily[i] = 0;
-      }
    }, null, true, 'America/Los_Angeles');
 });
 
