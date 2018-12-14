@@ -51,7 +51,6 @@ client.on('ready', () => {
    new CronJob('00 00 04 * * *', function () {
       var curRankings = getRankings(false);
       var curChannel = client.channels.get("436232448121241622");
-
       curChannel.send({
          embed: {
             color: 16711782,
@@ -59,6 +58,23 @@ client.on('ready', () => {
             description: curRankings
          }
       });
+
+      for (i = 0; i < count; i++) {
+         userDaily[i] = 0;
+      }
+   }, null, true, 'America/Los_Angeles');
+
+   new CronJob('00 00,30 * * * *', function () {
+      var curRankings = getRankings(false);
+      var curChannel = client.channels.get("521107455212781568");
+      curChannel.send({
+         embed: {
+            color: 16711782,
+            title: "Messages Sent Today",
+            description: curRankings
+         }
+      });
+
       for (i = 0; i < count; i++) {
          userDaily[i] = 0;
       }
