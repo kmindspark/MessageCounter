@@ -64,7 +64,7 @@ client.on('ready', () => {
       }
    }, null, true, 'America/Los_Angeles');
 
-   new CronJob('00 00,30 * * * *', function () {
+   new CronJob('00 00,15,30,45 * * * *', function () {
       var curRankings = getRankings(false);
       var curChannel = client.channels.get("521107455212781568");
       curChannel.send({
